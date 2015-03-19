@@ -1,4 +1,4 @@
-# docker-nginx-ember-proxy
+# Nginx Ember proxy docker
 Docker for hosting Ember apps in Nginx over HTTPS with a backend API. All requests starting with `/api/` are passed to the backend.
 
 ## Running your Ember app
