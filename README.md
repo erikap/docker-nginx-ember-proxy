@@ -5,8 +5,14 @@ Docker for hosting Ember apps in Nginx over HTTPS with a backend API. All reques
     docker run --name my-ember-app \
         --link my-backend-container:backend \
         -v /path/to/ember/dist:/usr/share/nginx/html:ro \
-        -v /path/to/certificates:/certs \
         -d erikap/nginx-ember-proxy
+
+## Running on HTTPS
+    docker run --name my-ember-app \
+        --link my-backend-container:backend \
+        -v /path/to/ember/dist:/usr/share/nginx/html:ro \
+        -v /path/to/certificates:/certs \
+        -d erikap/nginx-ember-proxy:https
 
 The certificates folder (`/path/to/certificates`) must contain the following files:
 - app.csr
